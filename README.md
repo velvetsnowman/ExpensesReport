@@ -1,6 +1,6 @@
 #### Expenses
 
-The point of this app is to practice testing, writing clean code, and building with objects.
+The point of this app is to practice testing, writing clean code and general practice.
 
 * How to use
 
@@ -30,10 +30,13 @@ record.report
 ```
 record.delete("expense", 1)
 ```
+
 For tests:
 ```
 exit irb and run 'rspec'
 ```
+
+#### User Stories
 
 ```
 As a user
