@@ -17,4 +17,14 @@ describe 'Feature tests' do
     my_tracker = Expenses.new
     expect{my_tracker.new_income(3)}.not_to raise_error
   end
+
+  # As a user
+  # So that I can see my total income and expenses
+  # I want them to be displayed clearly
+  it 'shoud let a user view clearly a list of expenses and incomes' do
+    my_tracker = Expenses.new
+    my_tracker.new_income(50)
+    my_tracker.new_expense(4)
+    expect{my_tracker.view_all}.not_to raise_error
+  end
 end
