@@ -28,4 +28,13 @@ class Expenses
       a += 1
     end
   end
+
+  def delete(list, num)
+    @expenses_list.delete_at(num-1) if list == "expense"
+    @income_list.delete_at(num-1) if list == "income"
+  end
+
+
+
+
 end
