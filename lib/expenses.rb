@@ -34,6 +34,10 @@ class Expenses
     @income_list.delete_at(num-1) if list == "income"
   end
 
+  def report
+    ((@expenses_list.reduce(0, :+) / @income_list.reduce(0, :+)) * 100).to_s + "%"
+  end
+
 
 
 

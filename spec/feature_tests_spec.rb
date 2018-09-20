@@ -31,11 +31,20 @@ describe 'Feature tests' do
   # As a user
   # In order to make changes to the listed expense and income items
   # I want to be able to delete them
-
   it 'shoud let a user delete a specific expense or income' do
     my_tracker = Expenses.new
     my_tracker.new_income(50)
     my_tracker.new_expense(4)
     expect{my_tracker.delete("expense", 1)}.not_to raise_error
+  end
+
+  # As a user
+  # So that I know what proportion my total expense are to total income
+  # I want to see this represented as a percentage
+  it 'shoud let a user see a percentage of expenses to income' do
+    my_tracker = Expenses.new
+    my_tracker.new_income(50)
+    my_tracker.new_expense(10)
+    expect{my_tracker.report}.not_to raise_error
   end
 end

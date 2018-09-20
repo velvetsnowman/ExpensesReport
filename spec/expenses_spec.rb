@@ -32,4 +32,10 @@ describe Expenses do
     expenses.delete("income", 1)
     expect(expenses.income_list).not_to include(20)
   end
+
+  it 'shoud let a user see a percentage of expenses to income' do
+    expenses.new_income(20)
+    expenses.new_expense(10)
+    expect(expenses.report).to eq "50%"
+  end
 end
